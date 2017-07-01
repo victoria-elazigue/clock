@@ -5,10 +5,11 @@ var clock = document.getElementById ('clock');
 function displayTime() {
 
 	var time = new Date();
-	var hours = (time.getHours() % 12).toString();
+	var hours = time.getHours().toString();
 	var minutes = time.getMinutes().toString(); 
 	var seconds = time.getSeconds().toString(); 
-	var meridiem = "AM"
+	var meridiem = "PM"
+	
 
 if (hours.length < 2) {
 	hours = '0' + hours; 
@@ -22,7 +23,16 @@ if (seconds.length < 2){
 	seconds = '0' + seconds; 
 }
 
-var clockString = hours + ' : ' + minutes + ' . ' + seconds;   
+if (hours.length >12){
+	hours = hours -12; 
+	miridiem = "AM"
+}
+
+if (hours.length === 12){
+	hours = 12; 
+}
+
+var clockString = hours + ' : ' + minutes + ' . ' + seconds + ' '+ meridiem;   
 
 clock.textContent = clockString; 
 

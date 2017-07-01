@@ -4,19 +4,19 @@ body {
 
 #clock{
 	font-family: 'Ubuntu Mono', monospace;
-	font-size: 150px;
+	font-size: 120px;
 	color: white;
 	text-align: center; 
 	margin-top: 300px;
 }
 
-@media (max-width: 930px){
+@media (max-width: 932px){
 	#clock{
 		font-size: 80px; 
 	}
 }
 
-@media (max-width: 510px){
+@media (max-width: 658px){
 	#clock{
 		font-size: 60px;
 	}
